@@ -105,72 +105,73 @@ criterio.Todos(Tabla1,0.6, T)
 
 Tabla2=crea.tablaX(c(3,2,6,7,9,0,0,-1,-3,5,-5,4,4,6,7,0,2,2,1,0,9,8,7,3,4,4,-2,-1,5,-8),numalternativas=6, numestados = 5)
 
-Tabla1
+Tabla2
 
 
 ## · Criterio de Wald:
 
-criterio.Wald(Tabla1,favorable =FALSE)
+criterio.Wald(Tabla2,favorable =FALSE)
 
 #   - Ponemos FALSE porque estamos trabajando con una tabla de costos. 
 
-#   - La mejor alternativa según el criterio de Wald es la "d2" y "d5", siendo el valor óptimo el 5.
+#   - La mejor alternativa según el criterio de Wald es la "d4", siendo el valor óptimo el 2.
 
 
 ## · Criterio Optimista:
 
-criterio.Optimista(Tabla1,F)
+criterio.Optimista(Tabla2,F)
 
-#   - La mejor alternativa según el criterio Optimista es la "d3", siendo el valor óptimo el -9.
+#   - La mejor alternativa según el criterio Optimista es la "d6", siendo el valor óptimo el -8.
 
 
 ## · Criterio de Hurwicz :
 
-criterio.Hurwicz(Tabla1, alfa= 0.6, F)
+criterio.Hurwicz(Tabla2, alfa= 0.6, F)
 
-# - La mejor alternativa según el criterio de Hurwicz es la "d1" siendo el valor óptimo el 5.4
+# - La mejor alternativa según el criterio de Hurwicz es la "d6" siendo el valor óptimo el -2.8
 
-criterio.Hurwicz.General(Tabla1)
+criterio.Hurwicz.General(Tabla2)
 
-dibuja.criterio.Hurwicz(Tabla1)
+dibuja.criterio.Hurwicz(Tabla2)
 
-dibuja.criterio.Hurwicz_Intervalos(Tabla1,F,F)
+dibuja.criterio.Hurwicz_Intervalos(Tabla2,F,F)
 
 
 ## · Criterio Savage:
 
-criterio.Savage(Tabla1,F)
+criterio.Savage(Tabla2,F)
 
-#  - La mejor alternativa según el criterio de Savage es la "d3" siendo el valor óptimo el 11.
+#  - La mejor alternativa según el criterio de Savage es la "d4" siendo el valor óptimo el 8.
 
 
 ## · Criterio de LaPlace:
 
-criterio.Laplace(Tabla1,F)
+criterio.Laplace(Tabla2,F)
 
-#  - La mejor alternativa según el criterio de LaPlace es la "d3" siendo el valor óptimo el 2.5 .
+#  - La mejor alternativa según el criterio de LaPlace es la "d6" siendo el valor óptimo el -0.4.
 
 
 ## · Criterio de Punto Ideal
 
-criterio.PuntoIdeal (Tabla1,F)
+criterio.PuntoIdeal (Tabla2,F)
 
-#   - La mejor alternativa según el criterio de Punto Ideal es la "d3" siendo el valor óptimo el 12.08305
+#   - La mejor alternativa según el criterio de Punto Ideal es la "d4" siendo el valor óptimo 
+#     el 11.40175
 
 
 ## · Todos los criterios: 
 
-criterio.Todos(Tabla1,0.6, F)
+criterio.Todos(Tabla2,0.6, F)
 
 
-#                    e1 e2 e3 e4  Wald Optimista Hurwicz Savage Laplace Punto Ideal
-# d1                  4  3  6  7     7         3     4.6     15    5.00       17.78
-# d2                  5  5  3 -2     5        -2     0.8     12    2.75       13.00
-# d3                  4  6 -9  9     9        -9    -1.8     11    2.50       12.08
-# d4                  2  5  9  0     9         0     3.6     18    4.00       18.38
-# d5                  1  2  5  3     5         1     2.6     14    2.75       14.87
-# iAlt.Opt (Desfav.) -- -- -- -- d2,d5        d3      d3     d3      d3          d3
-
+#                    e1 e2 e3 e4 e5 Wald Optimista Hurwicz Savage Laplace Punto Ideal
+# d1                  3  2  6  7  9    9         2     4.8     17     5.4       22.76
+# d2                  0  0 -1 -3  5    5        -3     0.2     13     0.2       14.07
+# d3                 -5  4  4  6  7    7        -5    -0.2     15     3.2       19.16
+# d4                  0  2  2  1  0    2         0     0.8      8     1.0       11.40
+# d5                  9  8  7  3  4    9         3     5.4     14     6.2       23.24
+# d6                  4 -2 -1  5 -8    5        -8    -2.8      9    -0.4       12.04
+# iAlt.Opt (Desfav.) -- -- -- -- --   d4        d6      d6     d4      d6          d4
 
 
 ###############################################################################
