@@ -126,7 +126,7 @@ criterio.Optimista(Tabla1,F)
 
 ## · Criterio de Hurwicz :
 
-criterio.Hurwicz(Tabla1, alfa= 0.6, T)
+criterio.Hurwicz(Tabla1, alfa= 0.6, F)
 
 # - La mejor alternativa según el criterio de Hurwicz es la "d1" siendo el valor óptimo el 5.4
 
@@ -134,7 +134,7 @@ criterio.Hurwicz.General(Tabla1)
 
 dibuja.criterio.Hurwicz(Tabla1)
 
-dibuja.criterio.Hurwicz_Intervalos(Tabla1,T,T)
+dibuja.criterio.Hurwicz_Intervalos(Tabla1,F,F)
 
 
 ## · Criterio Savage:
