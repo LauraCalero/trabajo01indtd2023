@@ -254,5 +254,11 @@ Tabla_problema2
 source("teoriadecision_funciones_incertidumbre.R")
 
 
-criterios=criterio.Todos(Tabla_problema2, alfa = 0.6, favorable = T)
+criterios=criterio.Todos(Tabla_problema2, alfa = 0.6, favorable = F)
 criterios
+
+# COnclusión:
+
+# - En todos los criterios sale que la opción más económica es ir a cenar a un
+#   bar de tapas, pagando 20 euros cada uno, comiendo y bebiendo todo lo que 
+#   queramos. Y después entrar en la bolera por 8 euros cada uno.
